@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #005bab;
+}
+
+.logo {
+    height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header-section {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.header-section img {
+    width: 100%;
+    height: auto;
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.header-text h1 {
+    font-size: 36px;
+    margin: 0 0 20px;
+}
+
+.header-text button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #005bab;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.register-section {
+    background-color: #ff6600;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 24px;
+}
+
+.hiring-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.main-section {
+    display: flex;
+    padding: 40px 20px;
+    background-color: #f0f0f0;
+}
+
+.teaching-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.teaching-content h2 {
+    font-size: 28px;
+}
+
+.teaching-content p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.teaching-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.teaching-content ul li {
+    margin: 10px 0;
+}
+
+.teaching-content button {
+    background-color: #005bab;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.main-section img {
+    flex: 1;
+    width: 100%;
+    height: auto;
+}
+
+.location-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.location-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.location-section button {
+    background-color: #005bab;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    
+}
+
+.awards-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f0f0f0;
+}
+
+.awards-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.awards-logos img {
+    margin: 10px;
+    height: 100px;
+}
+
+.footer-content {
+    background-color: #005bab;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-content ul li {
+    margin: 5px 0;
+}
+
+.footer-locations p {
+    margin: 5px 0;
+}
