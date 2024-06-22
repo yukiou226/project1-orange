@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splashes Sign In</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+</head>
+<body class="page7">
+    <div class="signin-container">
+        <div class="signin-header">
+            <img src="splash-wave" alt="signin-logo" class="logo">
+        </div>
+        <div class="signin-form">
+            <img src="Images/shark-full.png" alt="shark-signin" class="mascot">
+            <h2>SIGN IN</h2>
+            <form id="signin-form">
+                <label for="email">Email <span>*</span></label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="email-error"></span>
+                <label for="password">Password <span>*</span></label>
+                <input type="password" id="password" name="password" required>
+                <span class="error" id="password-error"></span>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+                <div class="signin-buttons">
+                    <button type="submit" id="signin-button" class="signin-button" disabled>Sign In</button>
+                    <button type="button" class="signup-button">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const emailInput = document.getElementById("email");
+            const passwordInput = document.getElementById("password");
+            const signinButton = document.getElementById("signin-button");
+            const emailError = document.getElementById("email-error");
+            const passwordError = document.getElementById("password-error");
+
+            const validateForm = () => {
+                let isValid = true;
+
+                if (!emailInput.value) {
+                    emailError.textContent = "Email is required.";
+                    emailError.style.display = "block";
+                    isValid = false;
+                } else if (!validateEmail(emailInput.value)) {
+                    emailError.textContent = "Invalid email format.";
+                    emailError.style.display = "block";
+                    isValid = false;
+                } else {
+                    emailError.style.display = "none";
+                }
+
+                if (!passwordInput.value) {
+                    passwordError.textContent = "Password is required.";
+                    passwordError.style.display = "block";
+                    isValid = false;
+                } else {
+                    passwordError.style.display = "none";
+                }
+
+                signinButton.disabled = !isValid;
+                signinButton.classList.toggle("active", isValid);
+            };
+
+            const validateEmail = (email) => {
+                const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()[\]\.,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,})$/i;
+                return re.test(String(email).toLowerCase());
+            };
+
+            emailInput.addEventListener("input", validateForm);
+            passwordInput.addEventListener("input", validateForm);
+
+            document.getElementById("signin-form").addEventListener("submit", (event) => {
+                event.preventDefault();
+                validateForm();
+                if (!signinButton.disabled) {
+                    // Proceed with form submission
+                    alert("Form submitted successfully!");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
