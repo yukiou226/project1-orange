@@ -6,9 +6,10 @@
     <title>Splashes Swim School</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;600;700&family=Henny+Penny&family=Open+Sans:wght@400;600;700&family=Snowburst+One&display=swap">
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="navbar">
             <img src="Graphics/logo-small.png" alt="Splashes Logo" class="logo">
             <nav>
@@ -19,7 +20,7 @@
                     <li><a href="#">Adult Programs</a></li>
                     <li><a href="#">Locations</a></li>
                     <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Register / Sign In</a></li>
+                    <button>Register / Sign In</button>
                 </ul>
             </nav>
         </div>
@@ -33,7 +34,7 @@
         </div>
     </header>
 
-    <section id="register-section">
+    <section id="register-section" >
         <h2>Register Online Here</h2>
     </section>
 
@@ -41,7 +42,8 @@
         <img src="Images/ww-site-hiring-banner-resized.png" alt="Now Hiring">
     </section>
 
-    <section class="main-section">
+    <section class="teaching-section section">
+        <img src="Images/home-hands-on-teaching.jpeg" alt="Teaching Image" class="teaching-bg">
         <div id="teaching-content">
             <h2>Hands On Teaching</h2>
             <p>Splashes Aquatics Swim School provides high quality swim instruction and the ideal environment for learning how to swim. Our swim instructors use specialized “muscle memory” teaching techniques that help our students progress at a quick rate. Grouped by age and ability, our students benefit from swim classes that offer personalized attention. It’s never too late to learn to swim!</p>
@@ -55,18 +57,23 @@
             <br><p>Ready to sign up?</p>
             <button>Register Now</button>
         </div>
-        <img src="Images/home-hands-on-teaching.jpeg" alt="Teaching Image">
     </section>
 
-    <section class="location-section">
-        <h2>Find a Splashes Swim School near you</h2>
-        <p id="family-swim-location">Family Swim School locations</p>
-        <p id="location-context">Splashes Aquatics offers the finest professional swimming lessons from 21 swim schools and aquatic centers in California and Denver.</p>
-        <button>Find a Location Near You</button>
+    <section class="location-section section">
+        <div class="location-bg-wrapper">
+            <img src="Images/home-our-locations-bg.jpeg" alt="Our location bg" class="location-bg">
+            <img src="Images/home-our-locations-map.png" alt="Our location map" class="location-map">
+            <div class="location-content">
+                <h2>Find a Splashes Swim School near you</h2>
+                <p id="family-swim-location">Family Swim School locations</p>
+                <p id="location-context">Splashes Aquatics offers the finest professional swimming lessons from 21 swim schools and aquatic centers in California and Denver.</p>
+                <button>Find a Location Near You</button>
+            </div>
+        </div>
     </section>
 
-    <section class="awards-section">
-        <p>Awards We've Won</p>
+    <section class="awards-section section">
+        <h2>Awards We've Won</h2>
         <div class="awards-logos">
             <img src="Images/awards/colorado-parenting-family-fav2021.png" alt="Award 1">
             <img src="Images/awards/bay-area-parent-gold2020.png" alt="Award 2">
@@ -81,11 +88,12 @@
         </div>
     </section>
 
-    <footer>
+    <footer class="footer">
+        <div class="footer-bg"></div>
+        <div class="footer-logo">
+            <img src="Images/wave-small.png" alt="footer logo">
+        </div>
         <div id="footer-linkage">
-            <div class="footer-logo">
-                <img src="Images/wave-small.png" alt="footer logo1">
-            </div>
             <ul>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Locations</a></li>
@@ -95,30 +103,32 @@
                 <li><a href="#">Careers</a></li>
             </ul>
             <div class="social">
-                <a href="#" class="fa fa-Linkedin"></a>
+                <a href="#" class="fa fa-linkedin"></a>
                 <a href="#" class="fa fa-instagram"></a>
                 <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-yalp"></a>
+                <a href="#" class="fa fa-yelp"></a>
                 <a href="#" class="fa fa-facebook"></a>
                 <a href="#" class="fa fa-youtube"></a>
             </div>
         </div>
-        <div id="footer-locations">
-                <p>Orange County: (949) 837-7665</p>
-                <p>San Diego County: (951) 309-3466</p>
-                <p>Los Angeles County: (626) 839-3100</p>
-                <p>Northern California: (408) 279-1700</p>
-                <p>Denver: (720) 344-7700</p>
+        <div id="footer-contact">
+            <div class="contact-info">
+                <p><strong>Orange County:</strong> <a href="tel:9498377665">(949) 837-7665</a></p>
+                <p><strong>San Diego County:</strong> <a href="tel:9513093466">(951) 309-3466</a></p>
+                <p><strong>Los Angeles County:</strong> <a href="tel:6268393100">(626) 839-3100</a></p>
+                <p><strong>Northern California:</strong> <a href="tel:4082791700">(408) 279-1700)</a></p>
+                <p><strong>Denver:</strong> <a href="tel:7203447700">(720) 344-7700</a></p>
+            </div>
         </div>
-        <div id="sponsors">
-            <li class="sponsor"><img src="Images/sponsors/footer-member-issa-logo.png" alt="member issa"></li>
-                <li class="sponsor"><img src="Images/sponsors/footer-ndpa-logo.png" alt="ndpa"></li>
-                <li class="sponsor"><img src="Images/sponsors/footer-stop-drowning-now-logo.png" alt="stop drowning"></li>
-                <li class="sponsor"><img src="Images/sponsors/footer-usssa-logo-2.png" alt="usssa"></li>
+        <div id="footer-sponsors">
+            <img src="Images/sponsors/footer-member-issa-logo.png" alt="member issa">
+            <img src="Images/sponsors/footer-ndpa-logo.png" alt="ndpa">
+            <img src="Images/sponsors/footer-stop-drowning-now-logo.png" alt="stop drowning">
+            <img src="Images/sponsors/footer-usssa-logo-2.png" alt="usssa">
         </div>
-        <div id="copyright">
-            <p> &copy 2022 Splashes</p>
-            <br><p>All Rights Reserved</p>
+        <div id="footer-copyright">
+            <p>&copy; 2022 Splashes</p>
+            <p>All Rights Reserved</p>
         </div>
     </footer>
 </body>
