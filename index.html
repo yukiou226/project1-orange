@@ -27,14 +27,13 @@
     </style>
 </head>
 <body>
-    <div id="index-header" class="d-flex justify-content-between align-items-center sticky-top">
+    <div id="index-header" class="sticky-top">
             <img src="Graphics/logo-small.png" alt="Splashes Logo" class="logo">
             <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#index-nav" aria-controls="index-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>-->
-            <div class="d-flex justify-content-center flex-grow-1">
-                <nav id="index-nav" class="collapse navbar-collapse">
-                    <ul class="navbar-nav mr-auto">
+                <nav id="index-nav" > <!--去除了class="collapse navbar-collapse"做个实验-->
+                    <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="#">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Swimming Lessons</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Swim Programs</a></li>
@@ -44,9 +43,8 @@
                         <!--<div class="d-flex justify-content-end">
                            </div>-->
                     </ul>
-                     <button class="btn btn-primary ml-auto">Register / Sign In</button>
+                     <button class="btn btn-primary">Register / Sign In</button>
                 </nav>
-            </div>
     </div>
     <header id="header-background">
         <div class="header-image">
@@ -60,7 +58,7 @@
     </header>
 
     <section id="register-section" class="text-center my-2">
-        <h2>Register Online Here</h2>
+        <img src="Images/register-online-here-banner.png" alt="register-online-pic" class="register-bg">
     </section>
 
     <section id="hiring-section" class="text-center my-2">
@@ -114,7 +112,7 @@
     </section>
 
     <footer id="index-footer" class="bg-light text-dark py-4" style="background-image: url('images/footer-bg.jpeg');">
-        <div class="container">
+        <!--<div class="container">-->
             <div class="text-center mb-3">
                 <img src="images/wave-small.png" alt="Splashes Logo" class="img-fluid">
             </div>
@@ -158,7 +156,7 @@
                     <p class="mb-0 font-weight-bold">Denver:</p>
                     <p><a href="tel:720-344-7700">(720) 344-7700</a></p>
                 </div>
-            </div>
+            <!--</div>-->
             <hr>
             <div class="d-flex justify-content-between footer-sponsors">
                 <div class="sponsor-logos">
@@ -171,7 +169,7 @@
                     <p class="mb-0">&copy; 2022 Splashes.<br> All Rights Reserved</p>
                 </div>
             </div>
-        </div>
+
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>

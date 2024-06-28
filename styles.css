@@ -12,19 +12,29 @@ body {
     position:sticky;
     width: 100%;
     z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    padding:0 16px;
 }
+ #index-nav{
+    display: flex; /* Change to flexbox layout */
+    align-items: center;
+ }
 
-#index-header .logo {
-    height: 80px;
-    width: auto;
-    margin-left: 16px;
+ #index-nav ul{
+    list-style-type: none;
+     margin: 0;
+     padding: 0;
+    overflow: hidden;
 }
-
 
 #index-nav .nav-link {
     color: white !important;
     font-size: 16px;
     font-weight: 400; /* Use regular version of Open Sans */
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 #index-nav.nav-link:hover {
@@ -41,13 +51,17 @@ body {
     cursor: pointer;
 }
 
-.header-image {
-    position: relative;
+#index-header .logo {
+    height: 80px;
+    width: auto;
+    margin-left: 16px;
 }
 
-.header-image img {
-    width: 100%;
-    height: auto;
+
+.header-image img{
+    position: relative;
+    width:100%;
+    height:auto;
 }
 
 .header-text {
@@ -64,6 +78,7 @@ body {
     font-size: 3em;
     font-weight: 700;
     margin-bottom: 20px;
+    margin-top: 160px; /*要把字体弄到中间去。。现在还不对*/
 }
 
 .header-text button {
@@ -76,6 +91,7 @@ body {
     cursor: pointer;
     font-weight: 600;
     margin: 0 10px;
+    font-family: "Open Sans";
 }
 /* Section styles */
 #register-section,
