@@ -26,6 +26,8 @@ body {
      margin: 0;
      padding: 0;
     overflow: hidden;
+    display:flex;
+    flex-direction: row;
 }
 
 #index-nav .nav-link {
@@ -258,7 +260,7 @@ body {
 }
 
 /* Media Queries */
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
     .navbar-toggler {
         display: block;
     }
@@ -285,6 +287,10 @@ body {
     #index-nav a {
         padding: 10px 0;
         width: 100%;
+    }
+
+    #index-header button{
+        visibility: visible;
     }
 
     .footer-sponsors {
@@ -331,6 +337,10 @@ body {
     #index-nav ul {
         flex-direction: column;
         align-items: center;
+    }
+
+    #index-header button{
+        visibility: visible;
     }
 
     .footer-sponsors {
