@@ -28,7 +28,12 @@
 </head>
 <body>
     <div id="index-header" class="sticky-top">
+        <div>
             <img src="Graphics/logo-small.png" alt="Splashes Logo" class="logo">
+            <button onclick="myFunction()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#index-nav" aria-controls="index-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
                 <nav id="index-nav" > <!--去除了class="collapse navbar-collapse"做个实验-->
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="#">About</a></li>
@@ -39,12 +44,10 @@
                         <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
                         <!--<div class="d-flex justify-content-end">
                            </div>-->
-                        <li><button class="btn btn-primary">Register / Sign In</button></li>
+                        <li class="nav-item-bt"><button class="btn btn-primary register-btn">Register / Sign In</button></li>
                     </ul>
                 </nav>
-                <button onclick="myFunction()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#index-nav" aria-controls="index-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-bars"></i>
-                </button>
+                
     </div>
     <header id="header-background">
         <div class="header-image">

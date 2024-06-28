@@ -267,11 +267,23 @@ body {
     .navbar-toggler {
         display:block;
     }
+    .nav-group{
+        display:flex;
+        width:100%;
+        justify-content: space-between;
+    }
+    .nav-item-bt{
+        width:100%;
+    }
+    .register-btn{
+        width:100%;
+    }
 
     #index-nav {
         flex-direction: column;
         align-items: flex-start;
         display: none;
+        width:100%;
     }
 
     #index-nav ul {
