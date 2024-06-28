@@ -59,9 +59,11 @@ body {
     margin-left: 16px;
 }
 
+.header-image{
+    position: relative;
+}
 
 .header-image img{
-    position: relative;
     width:100%;
     height:auto;
 }
@@ -80,7 +82,6 @@ body {
     font-size: 3em;
     font-weight: 700;
     margin-bottom: 20px;
-    margin-top: 160px; /*要把字体弄到中间去。。现在还不对*/
 }
 
 .header-text button {
@@ -263,20 +264,27 @@ body {
 .navbar-toggler{
     display:none;
 }
+.nav-group{
+    display:flex;
+    justify-content: space-between;
+}
 @media (max-width: 1199px) {
     .navbar-toggler {
         display:block;
     }
     .nav-group{
-        display:flex;
         width:100%;
-        justify-content: space-between;
     }
     .nav-item-bt{
         width:100%;
     }
     .register-btn{
         width:100%;
+    }
+    
+    #index-header{
+        flex-direction: column;
+        align-items: start;
     }
 
     #index-nav {
@@ -306,6 +314,10 @@ body {
 
     #index-header button{
         visibility: visible;
+    }
+
+    #header-text{
+        position:relative;
     }
 
     .footer-sponsors {
@@ -338,6 +350,7 @@ body {
         flex: 1 1 100%;
         margin-bottom: 10px;
     }
+
 }
 
 @media (max-width: 576px) {
@@ -356,6 +369,15 @@ body {
 
     #index-header button{
         visibility: visible;
+    }
+
+    .header-text h1 {
+        font-size: 1.5em;
+        font-family: "Bodoni Moda";
+    }
+
+    .header-text button + button {
+        margin-top: 20px; /* Add gap between the buttons */
     }
 
     .footer-sponsors {
