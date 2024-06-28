@@ -260,18 +260,21 @@ body {
 }
 
 /* Media Queries */
+.navbar-toggler{
+    display:none;
+}
 @media (max-width: 1199px) {
     .navbar-toggler {
-        display: block;
+        display:block;
     }
 
     #index-nav {
         flex-direction: column;
         align-items: flex-start;
+        display: none;
     }
 
     #index-nav ul {
-        display: none;
         flex-direction: column;
         width: 100%;
     }
