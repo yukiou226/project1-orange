@@ -8,7 +8,7 @@ body {
 }
 
 #index-header {
-    background-color:rgba(26,46,56,0.8) ;
+    background-color:rgba(26,46,56,0.9) ;
     position:sticky;
     width: 100%;
     z-index: 10;
@@ -96,20 +96,33 @@ body {
     margin: 0 10px;
     font-family: "Open Sans";
 }
-/* Section styles */
+/* ---------------------------------Section styles------------------------------- */
 #register-section,
 #hiring-section {
-    margin: 10px 0;
+    margin: 20px 0;
     text-align: center;
+    align-items: center;
+    display:flex;
+    justify-content: center; /* Added for centering */
 }
+
 .section h2 {
-    font-size: 2.5em;
+    font-size: 3em;
+    font-weight: 700;
     margin-bottom: 20px;
     font-family: 'Bodoni Moda'; /* Example of using Bodoni Moda */
 }
 
+.section h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Bodoni Moda'; /* Example of using Bodoni Moda */
+}
+
+
 .section p {
-    font-size: 1.2em;
+    font-size: 16px;
     margin-bottom: 20px;
     font-weight: 400; /* Use regular version of Open Sans */
 }
@@ -120,9 +133,12 @@ body {
 }
 
 .section ul li {
-    font-size: 1.2em;
+    font-size: 16px;
     margin: 10px 0;
-    font-weight: 400; /* Use regular version of Open Sans */
+    font-weight: 300; /* Use regular version of Open Sans */
+    list-style-type: disc;
+    margin-left:20px;
+    text-decoration: underline;
 }
 
 .section button {
@@ -138,10 +154,16 @@ body {
 
 .teaching-section {
     position: relative;
+    z-index: 2; /* Ensures it is above the location section */
+    margin-bottom: 20px;
+}
+
+.teaching-section h2{
+    font-size: 32px;
 }
 
 .teaching-bg {
-    width: 100%;
+    width: 130%;
     height: auto;
 }
 
@@ -149,6 +171,7 @@ body {
     position: absolute;
     top: 5%;
     left: 5%;
+    right:5%;
     padding: 20px;
     width: 50%;
     text-align: left;
@@ -158,16 +181,19 @@ body {
 .location-section {
     position: relative;
     padding: 0;
+    clear: both; /* Ensure the location section is always below the teaching section */
+    z-index: 1; /* Ensure it is below teaching section */
 }
 
 .location-bg-wrapper {
     position: relative;
+    width: 100%;
+    height:auto;
 }
 
-.location-bg {
-    width: 100%;
-    height: auto;
-}
+/*.location-bg {
+    display:block;
+}*/
 
 .location-map {
     position: absolute;
@@ -183,8 +209,9 @@ body {
     top: 10%;
     left: 5%;
     color: #f7f7f7;
-    padding: 20px;
+    padding: 40px;
     width: 50%; /* Ensure the content is on the left side */
+    max-height: 100%; /* Ensures the content does not overflow the background */
 }
 
 /* Footer */
@@ -260,7 +287,7 @@ body {
     font-size: 24px;
 }
 
-/* Media Queries */
+/* ---------------------Media Queries--------------------------- */
 .navbar-toggler{
     display:none;
 }
@@ -285,6 +312,7 @@ body {
     #index-header{
         flex-direction: column;
         align-items: start;
+        background-color:rgb(26,46,56) ;
     }
 
     #index-nav {
@@ -316,10 +344,64 @@ body {
         visibility: visible;
     }
 
-    #header-text{
-        position:relative;
+    .header-text h1 {
+        font-size: 2em;
+        font-family: "Bodoni Moda";
     }
 
+    .header-text button {
+        display: inline-block;
+        margin: 0 10px; /* Keep buttons horizontal with 10px margin */
+    }
+
+    #register-section img,
+    #hiring-section img {
+    max-width: 100%; /* Ensure images adjust to screen size */
+    height: auto;
+    }
+
+    .teaching-section img{
+        display: none; /* Hide the teaching image */
+    }
+
+    #teaching-content {
+        position:relative;
+        padding-right: 10%;
+        width: 100%; /* Make the content take full width */
+        text-align: left; 
+    }
+
+    #teaching-content button {
+        display: block;
+        margin: 20px auto; /* Center the button */
+    }
+
+    .location-section .location-map {
+        display: none; /* Hide the location map */
+    }
+
+    .location-bg:after {
+        content: "";
+        display: block;
+        min-height: 1%; /* Ensure background is at least 10% taller than content */
+        /*height: calc(100% + 10px); /* Add padding value (10px top + 10px bottom) */
+      }
+
+    .location-content {
+        position:absolute;
+        width: 100%;
+        text-align: center; /* Center the text */
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .location-content h2{
+        font-size:2em;
+        font-family: "Bodoni Moda";
+        font-weight: 700;
+    }
+    
     .footer-sponsors {
         flex-direction: column;
         align-items: center;
@@ -350,7 +432,6 @@ body {
         flex: 1 1 100%;
         margin-bottom: 10px;
     }
-
 }
 
 @media (max-width: 576px) {
@@ -376,9 +457,36 @@ body {
         font-family: "Bodoni Moda";
     }
 
-    .header-text button + button {
-        margin-top: 20px; /* Add gap between the buttons */
+    .header-text button {
+        display: block;
+        margin: 10px auto 0; /* Center buttons vertically with no margin between them */
     }
+
+    #register-section img,
+    #hiring-section img {
+    max-width: 100%; /* Ensure images adjust to screen size */
+    height: auto;
+    }
+
+    /*.location-content {
+        position: absolute;
+        text-align: center;
+        top: 0%;
+        transform: translateX(-50%);
+        width: 100%;
+    }*/
+
+    /*.location-content h2{
+        font-size:1.5em;
+        font-family: "Bodoni Moda";
+        font-weight: 700;
+    }
+
+    .location-content h3{
+        font-size:1.7em;
+        font-family: "Bodoni Moda";
+        font-weight: 700;
+    }*/
 
     .footer-sponsors {
         flex-direction: column;
