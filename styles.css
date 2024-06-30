@@ -214,6 +214,33 @@ body {
     max-height: 100%; /* Ensures the content does not overflow the background */
 }
 
+.awards-section {
+    padding: 50px;
+    text-align: center;
+    color: rgb(117, 117, 118);
+}
+
+.awards-logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin: 0 20px; /* Set a default margin for the container */
+}
+
+.award-item {
+    margin: 0 auto;
+}
+
+.award-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
 /* Footer */
 #index-footer {
     background-color: var(--color-light-gray);
@@ -402,6 +429,12 @@ body {
         font-weight: 700;
     }
     
+    .awards-section h2{
+        font-size: 1.5em;
+        font-family: "Bodoni Moda";
+        font-weight: 700;
+    }
+
     .footer-sponsors {
         flex-direction: column;
         align-items: center;
@@ -488,6 +521,12 @@ body {
         font-weight: 700;
     }*/
 
+
+    .awards-logos{
+        grid-template-columns: 1fr;
+        margin:0 10px;
+    }
+
     .footer-sponsors {
         flex-direction: column;
         align-items: center;
@@ -525,18 +564,7 @@ body {
     }
 }
 
-/*Additional styles*/
-.awards-section {
-    padding: 50px;
-    text-align: center;
-    color: rgb(117, 117, 118);
-}
 
-.awards-section img {
-    width: 100px;
-    height: auto;
-    margin: 10px;
-}
 
 /*page7-signin page*/
 /* Basic styling */
@@ -558,6 +586,9 @@ body {
     width: 400px;
     text-align: center;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .signin-header {
@@ -579,6 +610,7 @@ body {
 
 .signin-form {
     position: relative;
+    width: 100%;
 }
 
 .signin-form .mascot {
@@ -621,7 +653,7 @@ body {
     display: block;
     text-align: right;
     margin-bottom: 20px;
-    color: #007bff;
+    color: #03B1F4;
     text-decoration: none;
 }
 
@@ -643,7 +675,7 @@ body {
 }
 
 .signin-button {
-    background-color: #007bff;
+    background-color: #03B1F4;
     color: white;
     opacity: 0.5;
     cursor: not-allowed;
@@ -656,8 +688,8 @@ body {
 
 .signup-button {
     background-color: white;
-    color: #007bff;
-    border: 2px solid #007bff;
+    color:#03B1F4;
+    border: 2px solid #03B1F4;
 }
 
 .signin-button:hover, .signup-button:hover {
