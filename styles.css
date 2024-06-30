@@ -601,14 +601,15 @@ body {
 
 /*page7-signin page*/
 /* Basic styling */
-.page7 body {
+.page7 {
     font-family: 'OpenSans';
-    background-color: #acacac;
+    background-color: #f1f1f1;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
 }
 
 .signin-header {
@@ -624,22 +625,14 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 400px;
+    width: 500px;
     align-items: center;
     text-align: center;
     position: relative;
 }
 
-
-
 .signin-header .logo {
-    width: 200px;
-}
-
-.signin-header h1 {
-    font-size: 2.5em;
-    margin: 10px 0;
-    color: #007bff;
+    width: 250px;
 }
 
 .signin-form {
@@ -648,15 +641,16 @@ body {
 
 .signin-form .mascot {
     position: absolute;
-    left: -50px;
+    left: -70px;
     top: -30px;
-    width: 120px;
+    width: 140px;
 }
 
 .signin-form h2 {
     font-size: 1.5em;
     margin-bottom: 20px;
     font-weight: 700;
+    color:#444444
 }
 
 .signin-form label {
@@ -664,13 +658,16 @@ body {
     text-align: left;
     margin: 10px 0 5px;
     font-weight: 600;
+    color:rgb(240,0,86);
 }
 
 .signin-form input {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    margin-right:20px;
+    border: 1px solid #cfcfcf;
+    background-color: #f1f1f1;
     border-radius: 5px;
 }
 
@@ -687,7 +684,7 @@ body {
     display: block;
     text-align: right;
     margin-bottom: 20px;
-    color: #03B1F4;
+    color: #00cec8;
     text-decoration: underline;
 }
 
@@ -706,10 +703,11 @@ body {
     border-radius: 3em;
     font-size: 1em;
     cursor: pointer;
+    width:45%;
 }
 
 .signin-button {
-    background-color: #03B1F4;
+    background-color: #00cec8;
     color: white;
     opacity: 0.5;
     cursor: not-allowed;
@@ -722,8 +720,8 @@ body {
 
 .signup-button {
     background-color: white;
-    color:#03B1F4;
-    border: 2px solid #03B1F4;
+    color:#00cec8;
+    border: 2px solid #00cec8;
 }
 
 .signin-button:hover, .signup-button:hover {
