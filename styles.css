@@ -1,8 +1,31 @@
 /* Index page*/
+/*Fonts*/
+@font-face {
+    font-family: 'OpenSans';
+    src: url('Fonts/open-sans/OpenSans-Regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'OpenSans Semibold';
+    src: url('Fonts/open-sans/OpenSans-Semibold.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Bodoni Moda';
+    src: url('Fonts/Bodoni_Moda/BodoniModa-VariableFont_opsz,wght.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Bodoni Moda Italic';
+    src: url('Fonts/Bodoni_Moda/BodoniModa-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Snowburst One';
+    src: url('Fonts/Snowburst_One/SnowburstOne-Regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Henny-penny';
+    src: url('Fonts/Henny-Penny/HennyPenny-Regular.ttf') format('truetype');
+  }
 /*Header Section*/
 body {
-    font-family: 'Open Sans', 'Bodoni Moda', 'Henny Penny';
-    font-size: 16px;
     margin: 0;
     padding: 0;
 }
@@ -74,17 +97,19 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-family: 'Bodoni Moda';
-    color: white;
 }
 
 .header-text h1 {
     font-size: 3em;
     font-weight: 700;
+    font-family: 'Bodoni Moda';
+    color: white;
     margin-bottom: 20px;
 }
 
 .header-text button {
+    font-family: 'OpenSans';
+    font-weight: 700;
     padding: 20px 20px;
     font-size: 1em;
     color: rgb(3, 177, 244);
@@ -92,9 +117,8 @@ body {
     border: none;
     border-radius: 2em;
     cursor: pointer;
-    font-weight: 600;
     margin: 0 10px;
-    font-family: "Open Sans";
+    
 }
 /* ---------------------------------Section styles------------------------------- */
 #register-section,
@@ -122,6 +146,7 @@ body {
 
 
 .section p {
+    font-family: 'OpenSans';
     font-size: 16px;
     margin-bottom: 20px;
     font-weight: 400; /* Use regular version of Open Sans */
@@ -134,6 +159,7 @@ body {
 
 .section ul li {
     font-size: 16px;
+    font-family: 'OpenSans';
     margin: 10px 0;
     font-weight: 300; /* Use regular version of Open Sans */
     list-style-type: disc;
@@ -569,13 +595,21 @@ body {
 /*page7-signin page*/
 /* Basic styling */
 .page7 body {
-    font-family: 'Open Sans', Arial, sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'OpenSans';
+    background-color: #acacac;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.signin-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
 }
 
 .signin-container {
@@ -584,22 +618,15 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     width: 400px;
+    align-items: center;
     text-align: center;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.signin-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
+
 
 .signin-header .logo {
-    width: 100px;
+    width: 200px;
 }
 
 .signin-header h1 {
@@ -609,15 +636,14 @@ body {
 }
 
 .signin-form {
-    position: relative;
-    width: 100%;
+    position: center;
 }
 
 .signin-form .mascot {
     position: absolute;
     left: -50px;
     top: -30px;
-    width: 100px;
+    width: 120px;
 }
 
 .signin-form h2 {
@@ -650,26 +676,27 @@ body {
 }
 
 .forgot-password {
+    font-family: 'OpenSans';
     display: block;
     text-align: right;
     margin-bottom: 20px;
     color: #03B1F4;
-    text-decoration: none;
-}
-
-.forgot-password:hover {
     text-decoration: underline;
 }
 
-.signin-buttons {
-    display: flex;
-    justify-content: space-around;
+.forgot-password:hover {
+    text-decoration: none;
 }
 
+/*.signin-buttons {
+    display: flex;
+    justify-content: space-around;
+}*/
+
 .signin-button, .signup-button {
-    padding: 10px 20px;
+    padding: 10px 30px;
     border: none;
-    border-radius: 5px;
+    border-radius: 3em;
     font-size: 1em;
     cursor: pointer;
 }
