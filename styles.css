@@ -55,6 +55,7 @@ body {
 
 #index-nav .nav-link {
     color: white !important;
+    font-family:'OpenSans';
     font-size: 16px;
     font-weight: 400; /* Use regular version of Open Sans */
     display: block;
@@ -73,6 +74,7 @@ body {
     border-radius: 2em;
     padding: 10px 20px;
     font-weight: 600;
+    font-family: 'OpenSans';
     cursor: pointer;
 }
 
@@ -175,17 +177,18 @@ body {
     border: none;
     border-radius: 2em;
     cursor: pointer;
-    font-weight: 600; /* Use semi-bold version of Open Sans */
+    font-weight: 700; /* Use semi-bold version of Open Sans */
 }
 
 .teaching-section {
     position: relative;
     z-index: 2; /* Ensures it is above the location section */
-    margin-bottom: 20px;
+    overflow-x: hidden;
 }
 
 .teaching-section h2{
     font-size: 32px;
+    font-family: 'Bodoni Moda'
 }
 
 .teaching-bg {
@@ -209,12 +212,17 @@ body {
     padding: 0;
     clear: both; /* Ensure the location section is always below the teaching section */
     z-index: 1; /* Ensure it is below teaching section */
+    height:800px;
+    background-image: url('Images/home-our-locations-bg.jpeg');
+    background-size: cover;
+    width:100%;
+    overflow-x: hidden;
 }
 
 .location-bg-wrapper {
     position: relative;
     width: 100%;
-    height:auto;
+    height:inherit;
 }
 
 /*.location-bg {
@@ -224,9 +232,8 @@ body {
 .location-map {
     position: absolute;
     top: 0;
-    right: 0; /* Move the map to the right */
-    width: 40%;
-    height: auto;
+    right: -5%; /* Move the map to the right */
+    height: 100%;
 }
 
 .location-content {
